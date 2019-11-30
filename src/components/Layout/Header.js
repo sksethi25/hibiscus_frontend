@@ -135,8 +135,8 @@ class Header extends React.Component {
             >
               <PopoverBody className="p-0 border-light">
                 <UserCard
-                  title="Jane"
-                  subtitle="jane@jane.com"
+                  title="test"
+                  subtitle="test@test.com"
                   text="Last updated 3 mins ago"
                   className="border-light"
                 >
@@ -144,12 +144,7 @@ class Header extends React.Component {
                     <ListGroupItem tag="button" action className="border-light">
                       <MdPersonPin /> Profile
                     </ListGroupItem>
-                    <ListGroupItem tag="button" action className="border-light">
-                      <MdInsertChart /> Stats
-                    </ListGroupItem>
-                    <ListGroupItem tag="button" action className="border-light">
-                      <MdMessage /> Messages
-                    </ListGroupItem>
+                   
                     <ListGroupItem tag="button" action className="border-light">
                       <MdSettingsApplications /> Settings
                     </ListGroupItem>
