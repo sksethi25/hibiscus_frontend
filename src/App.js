@@ -1,6 +1,7 @@
 import { STATE_LOGIN, STATE_SIGNUP } from 'components/AuthForm';
 import GAListener from 'components/GAListener';
 import { EmptyLayout, LayoutRoute, MainLayout } from 'components/Layout';
+
 import PageSpinner from 'components/PageSpinner';
 import AuthPage from 'pages/AuthPage';
 import React from 'react';
@@ -24,6 +25,10 @@ const ProgressPage = React.lazy(() => import('pages/ProgressPage'));
 const TablePage = React.lazy(() => import('pages/TablePage'));
 const TypographyPage = React.lazy(() => import('pages/TypographyPage'));
 const WidgetPage = React.lazy(() => import('pages/WidgetPage'));
+
+const UsersPage1 = React.lazy(() => import('pages/UsersPage1'));
+const Patients = React.lazy(() => import('pages/Patients'));
+const Form = React.lazy(() => import('pages/Forms'))
 
 const getBasename = () => {
   return `/${process.env.PUBLIC_URL.split('/').pop()}`;
@@ -51,10 +56,21 @@ class App extends React.Component {
                 <AuthPage {...props} authState={STATE_SIGNUP} />
               )}
             />
-
-            <MainLayout breakpoint={this.props.breakpoint}>
+{
+            // <MainLayout breakpoint={this.props.breakpoint}>
+            //   <React.Suspense fallback={<PageSpinner />}>
+            //     <Route exact path="/" component={DashboardPage} />
+            //   </React.Suspense>
+            // </MainLayout>
+}
+            
+              <MainLayout breakpoint={this.props.breakpoint}>
+            
               <React.Suspense fallback={<PageSpinner />}>
                 <Route exact path="/" component={DashboardPage} />
+                <Route exact path="/users" component={UsersPage1} />
+                <Route exact path="/patients" component={Patients} />
+                <Route exact path="/form" component={Form} />
                 <Route exact path="/login-modal" component={AuthModalPage} />
                 <Route exact path="/buttons" component={ButtonPage} />
                 <Route exact path="/cards" component={CardPage} />
@@ -75,8 +91,12 @@ class App extends React.Component {
                 <Route exact path="/input-groups" component={InputGroupPage} />
                 <Route exact path="/charts" component={ChartPage} />
               </React.Suspense>
-            </MainLayout>
+            </MainLayout> 
+          
             <Redirect to="/" />
+
+           
+            
           </Switch>
         </GAListener>
       </BrowserRouter>

@@ -3,7 +3,7 @@ import PropTypes from 'utils/propTypes';
 
 import bn from 'utils/bemnames';
 
-import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Button } from 'reactstrap';
 
 import Typography from './Typography';
 
@@ -15,9 +15,19 @@ const Page = ({
   tag: Tag,
   className,
   children,
+  addModalButton,
+  addModalButtonClickFunction,
+  addModalButtonText,
   ...restProps
 }) => {
+  console.log("className", className);
   const classes = bem.b('px-3', className);
+   const bstyles={
+    paddingRight: '0.5rem',
+    marginBottom: '1.3rem',
+    marginLeft:'auto'
+  }
+
 
   return (
     <Tag className={classes} {...restProps}>
@@ -40,6 +50,9 @@ const Page = ({
               ))}
           </Breadcrumb>
         )}
+        { addModalButton &&
+          <Button style={bstyles} color="primary" onClick={addModalButtonClickFunction}>{addModalButtonText}</Button>
+        }
       </div>
       {children}
     </Tag>
