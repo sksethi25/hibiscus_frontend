@@ -51,7 +51,7 @@ class PatientAdmitModal extends React.Component {
                   className={classes}
 
                   >
-                  <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                  <ModalHeader toggle={this.toggle}>Add Patient</ModalHeader>
                   <ModalBody>
                      <Form id='patient-form' onSubmit={this.handleSubmit}>
                 <FormGroup row>
@@ -109,7 +109,7 @@ class PatientAdmitModal extends React.Component {
                 
                 <FormGroup check row>
                   <Col sm={{ size: 12, offset: 3 }}>
-                    <Button color="primary" form='patient-form' type="submit"> Do Something  </Button>
+                    <Button color="primary" form='patient-form' type="submit">Submit</Button>
                   </Col>
                 </FormGroup>
                 

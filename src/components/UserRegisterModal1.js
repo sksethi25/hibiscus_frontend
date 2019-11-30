@@ -51,7 +51,7 @@ class UserRegisterModal1 extends React.Component {
                   className={classes}
 
                   >
-                  <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                  <ModalHeader toggle={this.toggle}>User Registertion</ModalHeader>
                   <ModalBody>
                      <Form id='my-form' onSubmit={this.handleSubmit}>
                      <FormGroup row>
@@ -144,7 +144,7 @@ class UserRegisterModal1 extends React.Component {
                 </FormGroup>
                 <FormGroup check row>
                   <Col sm={{ size: 12, offset: 3 }}>
-                    <Button color="primary" form='my-form' type="submit"> Do Something  </Button>
+                    <Button color="primary" form='my-form' type="submit">Submit</Button>
                   </Col>
                 </FormGroup>
                 

@@ -60,7 +60,7 @@ class AddNewFormModal extends React.Component {
                   className={classes}
 
                   >
-                  <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                  <ModalHeader toggle={this.toggle}>Create Form</ModalHeader>
                   <ModalBody>
                      <Form id='my-form' onSubmit={this.handleSubmit}>
                   <FormGroup row>
@@ -81,7 +81,7 @@ class AddNewFormModal extends React.Component {
                    <Input style={style} type="text" name="label" placeholder="Edit Label" />
                   </Label>
                   <Col sm={8}>
-                  <Input type="text" name="label" placeholder="Enter Label for Text Field" />
+                  <Input type="text" name="label" placeholder="Enter Label" />
                   </Col>
                 </FormGroup>
                  <FormGroup row>
@@ -99,7 +99,7 @@ class AddNewFormModal extends React.Component {
                 </FormGroup>
                 <FormGroup check row>
                   <Col sm={{ size: 12, offset: 3 }}>
-                    <Button color="primary" form='my-form' type="submit"> Do Something  </Button>
+                    <Button color="primary" form='my-form' type="submit">Submit</Button>
                   </Col>
                 </FormGroup>
                 
